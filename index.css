@@ -1,0 +1,94 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0); /* Светлый градиент */
+    color: #333;
+}
+
+header {
+    background: #f5f5f5; /* Молочный цвет */
+    color: #000; /* Черный текст */
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff6f61; /* Акцентная полоса */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    animation: fadeIn 2s ease-in-out;
+    color: #000; /* Черный текст */
+}
+
+/* Анимация для заголовка */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #ff6f61; /* Акцентный цвет */
+    border-bottom: 3px solid #ff6f61;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+a {
+    color: #ff6f61; /* Акцентный цвет для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff3b2f; /* Цвет при наведении */
+    text-decoration: underline;
+}
+
+/* Стили для секции контактов */
+#contacts p {
+    margin: 10px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
