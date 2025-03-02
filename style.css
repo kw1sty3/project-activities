@@ -1,25 +1,62 @@
+/* Подключение шрифтов из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 /* Общие стили */
+:root {
+    /* Основные цвета */
+    --primary-color: #ff6f61;
+    --secondary-color: #ff3b2f;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--secondary-color);
+    --form-background: rgba(255, 255, 255, 0.9);
+    --border-color: #ccc;
+
+    /* Размеры шрифтов */
+    --font-size-base: 1.6rem; /* 16px */
+    --font-size-large: 2rem; /* 20px */
+    --font-size-small: 1.4rem; /* 14px */
+
+    /* Межстрочный интервал */
+    --line-height-base: 1.6;
+
+    /* Скругление углов */
+    --border-radius: 5px;
+
+    /* Размеры отступов */
+    --padding-base: 10px;
+    --padding-large: 20px;
+}
+
+/* Установка базового размера шрифта */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-    color: #333;
+    background: linear-gradient(135deg, var(--background-color), #e0e0e0);
+    color: var(--text-color);
 }
 
 header {
-    background: #f5f5f5;
-    color: #000;
-    padding: 20px;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: var(--padding-large);
     text-align: center;
-    border-bottom: 5px solid #ff6f61;
+    border-bottom: 5px solid var(--primary-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: var(--font-size-large);
+    font-weight: 700;
 }
 
 nav ul {
@@ -27,7 +64,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: var(--padding-large);
 }
 
 nav ul li {
@@ -36,68 +73,69 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ff6f61;
+    color: var(--link-color);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff3b2f;
+    color: var(--link-hover-color);
 }
 
 main {
-    padding: 30px;
+    padding: var(--padding-large);
     max-width: 800px;
     margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
+    background: var(--form-background);
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    color: #ff6f61;
-    border-bottom: 3px solid #ff6f61;
-    padding-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: var(--padding-base);
     font-size: 1.8rem;
+    font-weight: 700;
 }
 
 blockquote {
     font-style: italic;
     color: #666;
-    padding-left: 20px;
-    border-left: 3px solid #ff6f61;
+    padding-left: var(--padding-large);
+    border-left: 3px solid var(--primary-color);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--padding-base);
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: var(--padding-base);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 button {
-    background: #ff6f61;
+    background: var(--primary-color);
     color: white;
-    padding: 10px;
+    padding: var(--padding-base);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background 0.3s;
 }
 
 button:hover {
-    background: #ff3b2f;
+    background: var(--secondary-color);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #f5f5f5;
-    border-top: 5px solid #ff6f61;
+    padding: var(--padding-large);
+    background: var(--background-color);
+    border-top: 5px solid var(--primary-color);
 }
