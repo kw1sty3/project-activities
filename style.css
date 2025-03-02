@@ -1,9 +1,8 @@
-/* Подключение шрифтов из Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
-/* Общие стили */
 :root {
-    /* Основные цвета */
+    
     --primary-color: #ff6f61;
     --secondary-color: #ff3b2f;
     --background-color: #f9f9f9;
@@ -13,25 +12,20 @@
     --form-background: rgba(255, 255, 255, 0.9);
     --border-color: #ccc;
 
-    /* Размеры шрифтов */
-    --font-size-base: 1.6rem; /* 16px */
-    --font-size-large: 2rem; /* 20px */
-    --font-size-small: 1.4rem; /* 14px */
+    --font-size-base: 1.6rem; 
+    --font-size-large: 2rem; 
+    --font-size-small: 1.4rem;
 
-    /* Межстрочный интервал */
     --line-height-base: 1.6;
 
-    /* Скругление углов */
     --border-radius: 5px;
 
-    /* Размеры отступов */
     --padding-base: 10px;
     --padding-large: 20px;
 }
 
-/* Установка базового размера шрифта */
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%;
 }
 
 body {
